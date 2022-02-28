@@ -12,7 +12,7 @@ server.use(cors());
 
 server.use("/api/auth", authRouter);
 server.use("/api/users", usersRouter);
-server.use('api/posts', postRouter);
+server.use('/api/posts', postRouter);
 
 server.use((req, res, next) => {
   res.status(500).json({

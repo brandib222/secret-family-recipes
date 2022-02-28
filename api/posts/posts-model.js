@@ -24,6 +24,7 @@ function findById(post_id) {
     .where('posts.post_id', post_id).first()
 }
 
+
 // create delete and update later. Just want to get it working first
 
 module.exports = {

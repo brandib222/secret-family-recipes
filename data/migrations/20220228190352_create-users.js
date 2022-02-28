@@ -9,6 +9,7 @@ exports.up = function(knex) {
     .createTable('posts', posts => {
         posts.increments('post_id')
         posts.string('title', 128)
+        posts.string('image_url', 5000)
         posts.string('recipe', 5000)
         posts.string('username', 128)
           .notNullable()
