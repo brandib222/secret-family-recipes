@@ -1,5 +1,13 @@
 const db = require('../../data/db-config')
 
+async function add(user) {
+    await db('users')
+    .insert(user)
+    // .then(ids => {
+    //     return findById(ids[0])
+    // });
+}
+
 function find() {
     return db('users')
 }
@@ -17,6 +25,7 @@ function findById(user_id) {
 // create add, delete, and update later. Just want to get it working first
 
 module.exports = {
+    add, 
     find, 
     findBy,
     findById,

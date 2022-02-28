@@ -1,0 +1,1 @@
+// shows all the posts after you log in

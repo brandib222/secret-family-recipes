@@ -1,0 +1,1 @@
+// creates the list of posts (maps over all the stuff!)

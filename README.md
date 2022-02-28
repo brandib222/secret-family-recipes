@@ -33,8 +33,8 @@ other users and their pages/posts
     [x ] findById
 [ ] Build out the routers / make sure they work
     AUTH:
-  -  [ ] `[POST] /api/auth/register`
-  -  [ ] `[POST] /api/auth/login`
+  -  [x ] `[POST] /api/auth/register`
+  -  [x ] `[POST] /api/auth/login`
 
     USERS:
   -  [x ] `[POST] /api/users`

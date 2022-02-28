@@ -1,6 +1,8 @@
 const router = require('express').Router()
 const Users = require('./users-model')
 
+
+// GET USERS IS WORKING
 router.get('/', (req, res, next) => {
     Users.find()
     .then(users => {
@@ -8,6 +10,7 @@ router.get('/', (req, res, next) => {
     }).catch(next);
 });
 
+// GET USER BY ID IS WORKING
 router.get('/:user_id', (req, res, next) => {
     Users.findById(req.params.user_id)
     .then(user => {
