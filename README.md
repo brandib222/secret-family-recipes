@@ -18,8 +18,8 @@ recipe
 ## Backend Milestones
 [x ] Download all dependencies
 [x ] Create files and folders that you need
-[ ] Set up the env, secrets, server, and index files
-[ ] Create migrations, seeds, and knexfile
+[x ] Create migrations, seeds, and knexfile
+[x ] Set up the env, secrets, server, and index files
 [ ] Sketch out models
 [ ] Sketch out the routers
 [ ] Sketch out the middleware
