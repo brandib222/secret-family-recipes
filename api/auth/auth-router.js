@@ -32,7 +32,7 @@ router.post('/login', (req, res, next) => {
     }
 });
 
-buildToken(user) {
+function buildToken(user) {
     const payload = {
         subject: user.user_id,
         username:user.username,
