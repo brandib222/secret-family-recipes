@@ -14,3 +14,5 @@ router.get('/:user_id', (req, res, next) => {
         res.json(user)
     }).catch(next);
 })
+
+module.exports = router

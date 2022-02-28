@@ -15,26 +15,30 @@ author,
 photo, and 
 recipe
 
+once logged in, be able to view:
+their own page/posts
+other users and their pages/posts
+
 ## Backend Milestones
 [x ] Download all dependencies
 [x ] Create files and folders that you need
 [x ] Create migrations, seeds, and knexfile
 [x ] Set up the env, secrets, server, and index files
-[ ] Sketch out models
+[x ] Sketch out models
 [ ] Sketch out the routers
 [ ] Sketch out the middleware
-[ ] Build out the users model
-    [ ] find
-    [ ] findBy
-    [ ] findById
+[x ] Build out the users model
+    [x ] find
+    [x ] findBy
+    [x ] findById
 [ ] Build out the routers / make sure they work
     AUTH:
   -  [ ] `[POST] /api/auth/register`
   -  [ ] `[POST] /api/auth/login`
 
     USERS:
-  -  [ ] `[POST] /api/users`
-  -  [ ] `[POST] /api/users/:users_id`
+  -  [x ] `[POST] /api/users`
+  -  [x ] `[POST] /api/users/:users_id`
 [ ] Build out the middleware and incorporate it
 
 ## Users Schema
