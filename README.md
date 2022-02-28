@@ -1,3 +1,26 @@
+# Secret Family Recipes App
+
+The goal of this project is to allow people to catalog family recipes that only exist in physical form.
+
+The app will allow people to: 
+register, 
+login, 
+upload, 
+edit, and 
+delete posts, 
+
+which include a: 
+title, 
+author, 
+photo, and 
+recipe
+
+## Backend
+[ ] 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
