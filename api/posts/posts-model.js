@@ -26,14 +26,19 @@ async function add(post) {
     // });
 }
 
-async function remove(post) {
-    await db('posts')
-    .delete(post)
+async function remove(post_id) {
+    const deleted = await db('posts')
+    .where('post_id', post_id)
+    .returning('title')
+    .del()
+
+    return deleted
 }
 
-async function edit(post) {
-    await db('posts')
-    .update(post)
+async function edit(post_id, changes) {
+   return await db('posts')
+    .where('post_id', post_id)
+    .update(changes)
 }
 
 // create delete and update later. Just want to get it working first
