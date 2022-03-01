@@ -1,5 +1,5 @@
 import axios from 'axios';
-import url from '../src/components/URL'
+import url from './URL'
 
 // axiosWithAuth to replace axios in all api calls
 const axiosWithAuth = () => {

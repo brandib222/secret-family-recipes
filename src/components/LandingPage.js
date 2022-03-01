@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Post from './Post';
+import url from '../utils/URL';
 
 const initialPosts = [];
 
@@ -9,7 +10,7 @@ function LandingPage() {
     const [post, setPosts] = useState(initialPosts);
 
     const getPosts = () => {
-        axios.get('http://localhost:8080/api/posts')
+        axios.get(`${url}api/posts`)
         .then((res) => {
             setPosts(res.data);
             console.log(res);
