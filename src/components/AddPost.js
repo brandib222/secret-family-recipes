@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axiosWithAuth from '../utils/axiosWithAuth'
+import axiosWithAuth from '../utils/axiosWithAuth';
+import url from '../utils/URL';
 
 const initialPosts = [];
 const initialFormValues = {
@@ -15,7 +16,7 @@ export default function AddPost(props) {
     const [formValues, setFormValues] = useState(initialFormValues);
 
     const postNewRecipe = newPost => {
-        axiosWithAuth().post('http://localhost:8080/posts', newPost)
+        axiosWithAuth().post(`${url}api/posts`, newPost)
             .then(res => {
                 console.log('hello from res', res);
                 setPosts([res.data, ...posts])
@@ -25,7 +26,7 @@ export default function AddPost(props) {
     }
 
     useEffect(() => {
-        axiosWithAuth().get('http://localhost:8080/posts')
+        axiosWithAuth().get(`${url}/api/posts`)
             .then(res => {
                 setPosts(res.data)
             }).catch(err => {
