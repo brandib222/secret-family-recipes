@@ -10,7 +10,7 @@ function LandingPage() {
     const [post, setPosts] = useState(initialPosts);
 
     const getPosts = () => {
-        axios.get(`https://secret-family-recipes-henna.vercel.app/api/posts`)
+        axios.get(`http://secret-family-recipes-henna.vercel.app/api/posts`)
         .then((res) => {
             setPosts(res.data);
             console.log(res);
