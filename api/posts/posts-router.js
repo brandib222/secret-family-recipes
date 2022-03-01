@@ -20,4 +20,34 @@ router.get('/:post_id', (req, res, next) => {
     }).catch(next);
 })
 
+// CREATE POST
+router.post('/', (req, res, next) => {
+    Posts.add(req.body)
+        .then(newPost => {
+            res.status(201).json(newPost)
+        }).catch(err => {
+            res.status(500).json({message:'Failed to create new post'})
+        });
+});
+
+// DELETE POST
+router.delete('/:post_id', (req, res, next) => {
+    Posts.remove(req.body)
+        .then(newPost => {
+            res.status(201).json({message: 'Post was deleted!'})
+        }).catch(err => {
+            res.status(500).json({message:'Failed to delete new post'})
+        });
+});
+
+// EDIT POST 
+router.put('/:post_id', (req, res, next) => {
+    Posts.edit(req.body)
+        .then(editedPost => {
+            res.status(201).json(editedPost)
+        }).catch(err => {
+            res.status(500).json({message:'Failed to edit post'})
+        });
+});
+
 module.exports = router

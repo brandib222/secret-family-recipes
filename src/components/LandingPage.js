@@ -24,7 +24,7 @@ function LandingPage() {
 
 
     return (
-        <div className='posts-list-wrapper'>OMG DOES THIS WORK
+        <div className='posts-list-wrapper'>Secret Family Recipes
             <div className='post-cards'>
                 {
                     post.map((posts) => {

@@ -2,14 +2,6 @@
 
 const db = require('../../data/db-config')
 
-async function add(post) {
-    await db('posts')
-    .insert(post)
-    // .then(ids => {
-    //     return findById(ids[0])
-    // });
-}
-
 function find() {
     return db('posts')
 }
@@ -24,6 +16,25 @@ function findById(post_id) {
     .where('posts.post_id', post_id).first()
 }
 
+async function add(post) {
+    const [id] = await db('posts').insert(post);
+    return findById(id);
+    // await db('posts')
+    // .insert(post)
+    // .then(ids => {
+    //     return findById(ids[0])
+    // });
+}
+
+async function remove(post) {
+    await db('posts')
+    .delete(post)
+}
+
+async function edit(post) {
+    await db('posts')
+    .update(post)
+}
 
 // create delete and update later. Just want to get it working first
 
@@ -32,4 +43,6 @@ module.exports = {
     find, 
     findBy,
     findById,
+    remove,
+    edit
 }
