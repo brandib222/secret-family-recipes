@@ -1,3 +1,3 @@
-const url = 'https://secret-family-recipes-henna.vercel.app/'
+const url = 'http://localhost:8080/'
 
 export default url

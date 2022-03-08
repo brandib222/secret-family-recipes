@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Post from './Post';
-//import url from '../utils/URL';
+import url from '../utils/URL';
 
 const initialPosts = [];
 
@@ -10,7 +10,7 @@ function LandingPage() {
     const [post, setPosts] = useState(initialPosts);
 
     const getPosts = () => {
-        axios.get(`http://secret-family-recipes-henna.vercel.app/api/posts`)
+        axios.get(`${url}api/posts`)
         .then((res) => {
             setPosts(res.data);
             console.log(res);
