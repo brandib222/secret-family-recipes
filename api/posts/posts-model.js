@@ -26,6 +26,7 @@ async function add(post) {
     // });
 }
 
+
 async function remove(post_id) {
     const deleted = await db('posts')
     .where('post_id', post_id)
