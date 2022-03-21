@@ -9,6 +9,7 @@ const { JWT_SECRET } = require('../secrets/index')
 router.post('/register', (req, res, next) => {
 
     //return console.log(user) SO IT'S NOT ABOVE THIS LINE
+    
          // users are being added so i think it might be an httpie thing?
          // but users are showing in the database and the passwords are indeed encrypted
          
