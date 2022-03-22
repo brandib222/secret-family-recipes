@@ -5,3 +5,5 @@
     // make sure login works
     // make sure post router and models work
     // backend is *****DONE*******
+
+    // undeployed so i can work on it more easily
